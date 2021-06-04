@@ -114,6 +114,9 @@ static const NSTimeInterval oneDay = 24 * 60 * 60;
     x.minorTicksPerInterval = 0;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateStyle = NSDateFormatterShortStyle;
+    
+    
+    
     // kCFDateFormatterShortStyle;
     CPTTimeFormatter *timeFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
     timeFormatter.referenceDate = refDate;
