@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var alphaValue = 0.25
     var timer : Timer?
     var currentIndex: Int!
-    var timeDuration:Double = 0.1
+    var timeDuration:Double = 0.2
     
     @IBOutlet var bpmText: UILabel!
     @IBOutlet var hostView: CPTGraphHostingView!
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil){
         timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: self.timeDuration, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: self.timeDuration, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
     }
     
     @objc func fireTimer(){
